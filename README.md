@@ -6,6 +6,16 @@ This app is built using SvelteKit and optimized for performance, using optimisti
 
 <img src="screenshot-01.png" alt="Screenshot of the main page">
 
+## Design & engineering highlights
+
+I built WaniKani Mobile to make daily Japanese study feel quick, comfortable, and rewarding on a phone.
+
+- **Modern frontend:** Svelte 5, SvelteKit, TypeScript, and Tailwind CSS.
+- **Local-first performance:** IndexedDB, localStorage, service-worker caching, and asynchronous API calls.
+- **Mobile usability:** Responsive layouts, touch-friendly controls, and pronunciation audio.
+- **Playful learning:** Illustrated mascots, progress feedback, and canvas-confetti celebrations.
+- **Web platform integration:** Web Push notifications and PWA manifest
+
 ## Try it out 🚀
 
 I'm hosting the app [here on Vercel](https://svelte-wanikani-mobile.vercel.app).
