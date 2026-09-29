@@ -19,7 +19,7 @@ I built WaniKani Mobile to make daily Japanese study feel quick, comfortable, an
 
 ## Try it out 🚀
 
-I'm hosting the app [here on Vercel](https://svelte-wanikani-mobile.vercel.app).
+I'm hosting the app [here on Vercel](https://wanikani-mobile.vercel.app).
 
 ## Local development
 
