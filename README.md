@@ -1,10 +1,11 @@
+
 # WaniKani Mobile
 
 This is a community-made mobile app for WaniKani. WaniKani is a Japanese language learning web app that uses mnemonics and SRS to make kanji learning simple.
 
 This app is built using SvelteKit and optimized for performance, using optimistic rendering, async operations, and local data storage to give users a smooth experience.
 
-<img src="screenshot-01.png" alt="Screenshot of the main page">
+<img width="360" height="640" alt="showcase" src="https://github.com/user-attachments/assets/0a816c1a-f8a3-450d-a246-d24c2d8c6c5c" />
 
 ## Design & engineering highlights
 
