@@ -1,4 +1,3 @@
-
 # WaniKani Mobile
 
 This is a community-made mobile app for WaniKani. WaniKani is a Japanese language learning web app that uses mnemonics and SRS to make kanji learning simple.
