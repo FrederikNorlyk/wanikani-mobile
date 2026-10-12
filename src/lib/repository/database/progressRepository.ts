@@ -1,4 +1,4 @@
-import { openDb, withStore } from '$lib/repository/database/database';
+import { openDb, withStore } from '#lib/repository/database/database.js';
 
 export const PROGRESS_STORE = 'progress';
 

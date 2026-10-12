@@ -1,32 +1,32 @@
 <script lang="ts">
-	import * as AssignmentAPI from '$lib/functions/assignments.remote';
-	import * as LessonAPI from '$lib/functions/lessons.remote';
+	import * as AssignmentAPI from '#lib/functions/assignments.remote.js';
+	import * as LessonAPI from '#lib/functions/lessons.remote.js';
 	import {
 		type Assignment,
 		type NextReviewData
-	} from '$lib/functions/assignments.remote';
-	import * as AssignmentService from '$lib/services/assignmentService';
+	} from '#lib/functions/assignments.remote.js';
+	import * as AssignmentService from '#lib/services/assignmentService.js';
 	import { onMount, untrack } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import SubjectsRepository from '$lib/repository/database/subjectsRepository';
-	import Review from '$lib/components/review/Review.svelte';
-	import * as ReviewAPI from '$lib/functions/reviews.remote';
-	import SRSStageToast from '$lib/components/SRSStageToast.svelte';
-	import type { User } from '$lib/functions/user.remote';
-	import * as UserAPI from '$lib/functions/user.remote';
-	import UserRepository from '$lib/repository/local-storage/userRepository';
+	import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
+	import Review from '#lib/components/review/Review.svelte';
+	import * as ReviewAPI from '#lib/functions/reviews.remote.js';
+	import SRSStageToast from '#lib/components/SRSStageToast.svelte';
+	import type { User } from '#lib/functions/user.remote.js';
+	import * as UserAPI from '#lib/functions/user.remote.js';
+	import UserRepository from '#lib/repository/local-storage/userRepository.js';
 	import {
 		setStudySession,
 		studySession
-	} from '$lib/state/studySession.svelte';
-	import HomePage from '$lib/components/home/HomePage.svelte';
-	import PracticePage from '$lib/components/practice/PracticePage.svelte';
-	import ProgressRepository from '$lib/repository/database/progressRepository';
-	import AppMetadataRepository from '$lib/repository/local-storage/appMetadataRepository';
-	import { Spinner } from '$lib/shadcn/components/ui/spinner';
-	import StudySessionFinished from '$lib/components/illustration-cards/StudySessionFinished.svelte';
-	import LevelUpPage from '$lib/components/illustration-cards/LevelUpPage.svelte';
-	import Synchronizing from '$lib/components/illustration-cards/Synchronizing.svelte';
+	} from '#lib/state/studySession.svelte.js';
+	import HomePage from '#lib/components/home/HomePage.svelte';
+	import PracticePage from '#lib/components/practice/PracticePage.svelte';
+	import ProgressRepository from '#lib/repository/database/progressRepository.js';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
+	import StudySessionFinished from '#lib/components/illustration-cards/StudySessionFinished.svelte';
+	import LevelUpPage from '#lib/components/illustration-cards/LevelUpPage.svelte';
+	import Synchronizing from '#lib/components/illustration-cards/Synchronizing.svelte';
 
 	type AppState =
 		| 'loading'

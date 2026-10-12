@@ -1,6 +1,6 @@
-import CookieUtil from '$lib/util/cookieUtil';
-import type { Handle } from '@sveltejs/kit';
+import CookieUtil from '#lib/util/cookieUtil.js';
 import { redirect } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const routeId = event.route.id;

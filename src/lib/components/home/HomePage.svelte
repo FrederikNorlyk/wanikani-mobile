@@ -1,16 +1,16 @@
 <script lang="ts">
-	import CenteredCardLayout from '$lib/components/layouts/CenteredCardLayout.svelte';
+	import CenteredCardLayout from '#lib/components/layouts/CenteredCardLayout.svelte';
 	import ChevronUp from '@lucide/svelte/icons/chevron-up';
 	import Dumbbell from '@lucide/svelte/icons/dumbbell';
 	import GraduationCap from '@lucide/svelte/icons/graduation-cap';
 	import Settings from '@lucide/svelte/icons/settings';
-	import SettingsDrawer from '$lib/components/SettingsDrawer.svelte';
-	import AnchorButton from '$lib/components/button/AnchorButton.svelte';
-	import Button from '$lib/components/button/Button.svelte';
-	import type { NextReviewData } from '$lib/functions/assignments.remote';
-	import AppMetadataRepository from '$lib/repository/local-storage/appMetadataRepository';
-	import NotificationBadge from '$lib/components/NotificationBadge.svelte';
-	import ReviewCard from '$lib/components/home/ReviewCard.svelte';
+	import SettingsDrawer from '#lib/components/SettingsDrawer.svelte';
+	import AnchorButton from '#lib/components/button/AnchorButton.svelte';
+	import Button from '#lib/components/button/Button.svelte';
+	import type { NextReviewData } from '#lib/functions/assignments.remote.js';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+	import NotificationBadge from '#lib/components/NotificationBadge.svelte';
+	import ReviewCard from '#lib/components/home/ReviewCard.svelte';
 
 	interface Props {
 		numberOfAssignments: number;

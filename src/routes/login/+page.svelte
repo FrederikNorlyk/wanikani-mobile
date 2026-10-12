@@ -2,14 +2,14 @@
 	import LockKeyhole from '@lucide/svelte/icons/lock-keyhole';
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import mascot from '$lib/assets/mascots/boy-and-dog.png';
-	import { login } from '$lib/functions/auth.remote';
-	import { FieldError } from '$lib/shadcn/components/ui/field';
-	import { Spinner } from '$lib/shadcn/components/ui/spinner';
-	import Card from '$lib/components/Card.svelte';
-	import Button from '$lib/components/button/Button.svelte';
+	import mascot from '#lib/assets/mascots/boy-and-dog.png';
+	import { login } from '#lib/functions/auth.remote.js';
+	import { FieldError } from '#lib/shadcn/components/ui/field/index.js';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
+	import Card from '#lib/components/Card.svelte';
+	import Button from '#lib/components/button/Button.svelte';
 	import PermissionHint from './PermissionHint.svelte';
-	import TextField from '$lib/components/form/TextField.svelte';
+	import TextField from '#lib/components/form/TextField.svelte';
 	import APITokenPageButton from './APITokenPageButton.svelte';
 
 	let isFormDisabled = $state(false);

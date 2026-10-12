@@ -1,6 +1,6 @@
-import * as UserAPI from '$lib/functions/user.remote';
-import { type User } from '$lib/functions/user.remote';
-import { Repository } from '$lib/repository/local-storage/repository';
+import * as UserAPI from '#lib/functions/user.remote.js';
+import { type User } from '#lib/functions/user.remote.js';
+import { Repository } from '#lib/repository/local-storage/repository.js';
 
 const KEY = 'user';
 

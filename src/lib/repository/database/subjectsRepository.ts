@@ -1,6 +1,6 @@
-import type { Subject } from '$lib/functions/subjects.remote';
-import * as API from '$lib/functions/subjects.remote';
-import { openDb, withStore } from '$lib/repository/database/database';
+import type { Subject } from '#lib/functions/subjects.remote.js';
+import * as API from '#lib/functions/subjects.remote.js';
+import { openDb, withStore } from '#lib/repository/database/database.js';
 
 export const SUBJECTS_STORE = 'subjects';
 

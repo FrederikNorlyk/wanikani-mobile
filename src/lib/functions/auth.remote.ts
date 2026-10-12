@@ -1,6 +1,6 @@
+import * as UserAPI from '#lib/functions/user.remote.js';
+import CookieUtil from '#lib/util/cookieUtil.js';
 import { command, form, getRequestEvent } from '$app/server';
-import * as UserAPI from '$lib/functions/user.remote';
-import CookieUtil from '$lib/util/cookieUtil';
 import { invalid, redirect } from '@sveltejs/kit';
 import * as v from 'valibot';
 

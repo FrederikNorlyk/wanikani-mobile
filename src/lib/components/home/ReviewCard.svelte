@@ -1,12 +1,12 @@
 <script lang="ts">
 	import BookOpen from '@lucide/svelte/icons/book-open';
-	import slump_good_man_study from '$lib/assets/irasutoya/slump_good_man_study.png';
-	import study_night_boy from '$lib/assets/irasutoya/study_night_boy.png';
-	import study_chienetsu_boy from '$lib/assets/irasutoya/study_chienetsu_boy.png';
-	import kokage_tree_necchusyou from '$lib/assets/irasutoya/kokage_tree_necchusyou.png';
-	import type { NextReviewData } from '$lib/functions/assignments.remote';
-	import Button from '$lib/components/button/Button.svelte';
-	import IllustrationCard from '$lib/components/IllustrationCard.svelte';
+	import slump_good_man_study from '#lib/assets/irasutoya/slump_good_man_study.png';
+	import study_night_boy from '#lib/assets/irasutoya/study_night_boy.png';
+	import study_chienetsu_boy from '#lib/assets/irasutoya/study_chienetsu_boy.png';
+	import kokage_tree_necchusyou from '#lib/assets/irasutoya/kokage_tree_necchusyou.png';
+	import type { NextReviewData } from '#lib/functions/assignments.remote.js';
+	import Button from '#lib/components/button/Button.svelte';
+	import IllustrationCard from '#lib/components/IllustrationCard.svelte';
 
 	interface Props {
 		numberOfAssignments: number;

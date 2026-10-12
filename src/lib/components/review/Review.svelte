@@ -1,18 +1,18 @@
 <script lang="ts">
-	import type { Subject } from '$lib/functions/subjects.remote';
+	import type { Subject } from '#lib/functions/subjects.remote.js';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import { Progress } from '$lib/shadcn/components/ui/progress';
-	import SettingsRepository from '$lib/repository/local-storage/settingsRepository';
-	import AudioUtil from '$lib/util/audioUtil';
-	import Button from '$lib/components/button/Button.svelte';
+	import { Progress } from '#lib/shadcn/components/ui/progress/index.js';
+	import SettingsRepository from '#lib/repository/local-storage/settingsRepository.js';
+	import AudioUtil from '#lib/util/audioUtil.js';
+	import Button from '#lib/components/button/Button.svelte';
 	import { toast } from 'svelte-sonner';
-	import { studySession } from '$lib/state/studySession.svelte.js';
-	import { calculatePercentage } from '$lib/util/mathUtil';
-	import CurrentSubjectCard from '$lib/components/review/CurrentSubjectCard.svelte';
-	import AnswerCard from '$lib/components/review/AnswerCard.svelte';
+	import { studySession } from '#lib/state/studySession.svelte.js';
+	import { calculatePercentage } from '#lib/util/mathUtil.js';
+	import CurrentSubjectCard from '#lib/components/review/CurrentSubjectCard.svelte';
+	import AnswerCard from '#lib/components/review/AnswerCard.svelte';
 	import BookOpen from '@lucide/svelte/icons/book-open';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
-	import AnswerButton from '$lib/components/review/AnswerButton.svelte';
+	import AnswerButton from '#lib/components/review/AnswerButton.svelte';
 
 	interface Props {
 		subject: Subject;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import Card from '$lib/components/Card.svelte';
+	import Card from '#lib/components/Card.svelte';
 
 	interface Props {
 		header: Snippet;

@@ -1,6 +1,6 @@
-import { PUBLIC_VAPID } from '$env/static/public';
-import * as NotificationsAPI from '$lib/functions/notifications.remote';
-import { base64UrlToUint8Array } from '$lib/util/base64';
+import * as NotificationsAPI from '#lib/functions/notifications.remote.js';
+import { base64UrlToUint8Array } from '#lib/util/base64.js';
+import { PUBLIC_VAPID } from '$app/env/public';
 
 export function supportsPushNotifications(): boolean {
 	return (

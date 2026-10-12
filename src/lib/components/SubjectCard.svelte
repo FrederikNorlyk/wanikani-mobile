@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Subject } from '$lib/functions/subjects.remote';
+	import type { Subject } from '#lib/functions/subjects.remote.js';
 	import type { Snippet } from 'svelte';
-	import { cn } from '$lib/shadcn/utils';
+	import { cn } from '#lib/shadcn/utils.js';
 
 	interface Props {
 		class?: string;

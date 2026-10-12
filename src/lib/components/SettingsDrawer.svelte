@@ -5,15 +5,15 @@
 	import SettingsRepository, {
 		AUDIO_CHOICES,
 		type Settings
-	} from '$lib/repository/local-storage/settingsRepository';
-	import * as AssignmentService from '$lib/services/assignmentService';
-	import AppMetadataRepository from '$lib/repository/local-storage/appMetadataRepository';
-	import NotificationBadge from '$lib/components/NotificationBadge.svelte';
-	import Button from '$lib/components/button/Button.svelte';
-	import { supportsPushNotifications } from '$lib/util/notificationUtil';
+	} from '#lib/repository/local-storage/settingsRepository.js';
+	import * as AssignmentService from '#lib/services/assignmentService.js';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+	import NotificationBadge from '#lib/components/NotificationBadge.svelte';
+	import Button from '#lib/components/button/Button.svelte';
+	import { supportsPushNotifications } from '#lib/util/notificationUtil.js';
 	import { resolve } from '$app/paths';
-	import AnchorButton from '$lib/components/button/AnchorButton.svelte';
-	import LogOutButton from '$lib/components/button/LogOutButton.svelte';
+	import AnchorButton from '#lib/components/button/AnchorButton.svelte';
+	import LogOutButton from '#lib/components/button/LogOutButton.svelte';
 
 	interface Props {
 		isOpen: boolean;
@@ -143,7 +143,7 @@
 							<AnchorButton
 								class="w-full"
 								buttonColor="red"
-								href={resolve('/pwa-instructions')}
+								href={resolve('pwa-instructions')}
 								size="small"
 								>View installation instructions
 								<BadgeInfo aria-hidden="true" />

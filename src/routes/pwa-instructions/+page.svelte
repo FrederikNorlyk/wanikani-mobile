@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Share from '@lucide/svelte/icons/share';
-	import Card from '$lib/components/Card.svelte';
-	import AnchorButton from '$lib/components/button/AnchorButton.svelte';
+	import Card from '#lib/components/Card.svelte';
+	import AnchorButton from '#lib/components/button/AnchorButton.svelte';
 	import { resolve } from '$app/paths';
-	import CenteredCardLayout from '$lib/components/layouts/CenteredCardLayout.svelte';
+	import CenteredCardLayout from '#lib/components/layouts/CenteredCardLayout.svelte';
 </script>
 
 <CenteredCardLayout>
@@ -39,7 +39,7 @@
 	{#snippet actions()}
 		<AnchorButton
 			buttonColor="red"
-			href={resolve('/')}
+			href={resolve('/(authed)')}
 			size="small"
 			type="button"
 		>

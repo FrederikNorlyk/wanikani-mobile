@@ -1,5 +1,5 @@
+import CookieUtil from '#lib/util/cookieUtil.js';
 import { getRequestEvent } from '$app/server';
-import CookieUtil from '$lib/util/cookieUtil';
 
 interface Parameters {
 	method: 'GET' | 'POST' | 'DELETE' | 'PUT' | 'PATCH';
