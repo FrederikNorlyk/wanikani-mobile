@@ -1,6 +1,6 @@
+import { subjectTypes } from '#lib/types/subjectType.js';
+import sendHTTPRequest from '#lib/util/httpUtil.js';
 import { query } from '$app/server';
-import { subjectTypes } from '$lib/types/subjectType';
-import sendHTTPRequest from '$lib/util/httpUtil';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';
 

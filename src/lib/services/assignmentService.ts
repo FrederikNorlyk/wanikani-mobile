@@ -1,15 +1,15 @@
 import type {
 	Assignment,
 	NextReviewData
-} from '$lib/functions/assignments.remote';
-import * as AssignmentAPI from '$lib/functions/assignments.remote';
+} from '#lib/functions/assignments.remote.js';
+import * as AssignmentAPI from '#lib/functions/assignments.remote.js';
 import {
 	registerPushNotification,
 	unregisterPushNotification
-} from '$lib/functions/notifications.remote';
-import AppMetadataRepository from '$lib/repository/local-storage/appMetadataRepository';
-import type { ReviewsPresentationOrder } from '$lib/types/reviewsPresentationOrder';
-import * as NotificationUtil from '$lib/util/notificationUtil';
+} from '#lib/functions/notifications.remote.js';
+import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+import type { ReviewsPresentationOrder } from '#lib/types/reviewsPresentationOrder.js';
+import * as NotificationUtil from '#lib/util/notificationUtil.js';
 
 export async function refresh(
 	reviewsPresentationOrder: ReviewsPresentationOrder

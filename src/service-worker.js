@@ -3,7 +3,9 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
-import { build, files, version } from '$service-worker';
+import { version } from '$app/env';
+import { assets as appAssets, immutable, prerendered } from '$app/manifest';
+import { resolve } from '$app/paths';
 
 const self = /** @type {ServiceWorkerGlobalScope} */ (
 	/** @type {unknown} */ (globalThis.self)
@@ -12,12 +14,14 @@ const self = /** @type {ServiceWorkerGlobalScope} */ (
 const imageCacheName = 'wanikani-mobile-images';
 const cachePrefix = 'wanikani-mobile-assets-';
 const cacheName = `${cachePrefix}${version}`;
-const assets = new Set(
-	[...build, ...files].map((path) => new URL(path, self.location.origin).href)
+const assetUrls = new Set(
+	[...immutable, ...appAssets, ...prerendered]
+		.map(({ path }) => resolve(path))
+		.map((path) => new URL(path, self.location.origin).href)
 );
 
 const images = new Set(
-	[...assets].filter((url) =>
+	[...assetUrls].filter((url) =>
 		/\.(avif|gif|ico|jpe?g|png|svg|webp)$/i.test(new URL(url).pathname)
 	)
 );
@@ -71,7 +75,7 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-	if (event.request.method !== 'GET' || !assets.has(event.request.url)) {
+	if (event.request.method !== 'GET' || !assetUrls.has(event.request.url)) {
 		return;
 	}
 

@@ -1,5 +1,5 @@
+import { DATABASE_URL } from '$app/env/private';
 import { command } from '$app/server';
-import { DATABASE_URL } from '$env/static/private';
 import { neon } from '@neondatabase/serverless';
 import * as v from 'valibot';
 

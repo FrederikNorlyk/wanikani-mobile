@@ -3,8 +3,8 @@ import {
 	CRON_SECRET,
 	DATABASE_URL,
 	PRIVATE_VAPID
-} from '$env/static/private';
-import { PUBLIC_VAPID } from '$env/static/public';
+} from '$app/env/private';
+import { PUBLIC_VAPID } from '$app/env/public';
 import { neon } from '@neondatabase/serverless';
 import webpush from 'web-push';
 

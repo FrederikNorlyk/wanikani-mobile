@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { cn } from '$lib/shadcn/utils';
+	import { cn } from '#lib/shadcn/utils.js';
 
 	let {
 		ref = $bindable(null),

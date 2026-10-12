@@ -1,6 +1,6 @@
+import { reviewsPresentationOrder } from '#lib/types/reviewsPresentationOrder.js';
+import sendHTTPRequest from '#lib/util/httpUtil.js';
 import { query } from '$app/server';
-import { reviewsPresentationOrder } from '$lib/types/reviewsPresentationOrder';
-import sendHTTPRequest from '$lib/util/httpUtil';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';
 

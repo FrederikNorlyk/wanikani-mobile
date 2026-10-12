@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ExternalLink from '@lucide/svelte/icons/external-link';
-	import SubjectCard from '$lib/components/SubjectCard.svelte';
-	import type { Subject } from '$lib/functions/subjects.remote';
-	import SubjectCharacter from '$lib/components/SubjectCharacter.svelte';
+	import SubjectCard from '#lib/components/SubjectCard.svelte';
+	import type { Subject } from '#lib/functions/subjects.remote.js';
+	import SubjectCharacter from '#lib/components/SubjectCharacter.svelte';
 
 	interface Props {
 		subject: Subject;

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import GridLayout from '$lib/components/layouts/GridLayout.svelte';
-	import LevelsGrid from '$lib/components/practice/LevelsGrid.svelte';
-	import LevelPage from '$lib/components/practice/LevelPage.svelte';
-	import NavBar from '$lib/components/practice/NavBar.svelte';
+	import GridLayout from '#lib/components/layouts/GridLayout.svelte';
+	import LevelsGrid from '#lib/components/practice/LevelsGrid.svelte';
+	import LevelPage from '#lib/components/practice/LevelPage.svelte';
+	import NavBar from '#lib/components/practice/NavBar.svelte';
 
 	type PageState = 'select-level' | 'view-level';
 

@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import GridLayout from '$lib/components/layouts/GridLayout.svelte';
+	import GridLayout from '#lib/components/layouts/GridLayout.svelte';
 	import ProgressRepository, {
 		type Progress
-	} from '$lib/repository/database/progressRepository';
-	import SubjectsRepository from '$lib/repository/database/subjectsRepository';
-	import type { Subject } from '$lib/functions/subjects.remote';
-	import { setStudySession } from '$lib/state/studySession.svelte';
-	import Button from '$lib/components/button/Button.svelte';
-	import { cn } from '$lib/shadcn/utils';
+	} from '#lib/repository/database/progressRepository.js';
+	import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
+	import type { Subject } from '#lib/functions/subjects.remote.js';
+	import { setStudySession } from '#lib/state/studySession.svelte.js';
+	import Button from '#lib/components/button/Button.svelte';
+	import { cn } from '#lib/shadcn/utils.js';
 	import {
 		AlertDialog,
 		AlertDialogAction,
@@ -18,9 +18,9 @@
 		AlertDialogFooter,
 		AlertDialogHeader,
 		AlertDialogTitle
-	} from '$lib/shadcn/components/ui/alert-dialog';
+	} from '#lib/shadcn/components/ui/alert-dialog/index.js';
 	import SubjectCard from '../SubjectCard.svelte';
-	import SubjectCharacter from '$lib/components/SubjectCharacter.svelte';
+	import SubjectCharacter from '#lib/components/SubjectCharacter.svelte';
 
 	interface Props {
 		header: Snippet;

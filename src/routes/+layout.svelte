@@ -1,8 +1,8 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.png';
+	import favicon from '#lib/assets/favicon.png';
 	import { onMount } from 'svelte';
-	import { Toaster } from '$lib/shadcn/components/ui/sonner/index.js';
+	import { Toaster } from '#lib/shadcn/components/ui/sonner/index.js';
 
 	let { children } = $props();
 

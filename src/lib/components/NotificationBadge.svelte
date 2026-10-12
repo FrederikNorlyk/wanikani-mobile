@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/shadcn/utils';
+	import { cn } from '#lib/shadcn/utils.js';
 
 	interface Props {
 		class?: string;

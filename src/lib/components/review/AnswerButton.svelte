@@ -1,21 +1,21 @@
 <script lang="ts">
-	import blackCatNo from '$lib/assets/mascots/black-cat-no.png';
-	import blackCatYes from '$lib/assets/mascots/black-cat-yes.png';
-	import darumaNo from '$lib/assets/mascots/daruma-no.png';
-	import darumaYes from '$lib/assets/mascots/daruma-yes.png';
-	import dogNo from '$lib/assets/mascots/dog-no.png';
-	import dogYes from '$lib/assets/mascots/dog-yes.png';
-	import foxNo from '$lib/assets/mascots/fox-no.png';
-	import foxYes from '$lib/assets/mascots/fox-yes.png';
-	import luckyCatNo from '$lib/assets/mascots/lucky-cat-no.png';
-	import luckyCatYes from '$lib/assets/mascots/lucky-cat-yes.png';
-	import tanukiNo from '$lib/assets/mascots/tanuki-no.png';
-	import tanukiYes from '$lib/assets/mascots/tanuki-yes.png';
-	import Button from '$lib/components/button/Button.svelte';
+	import blackCatNo from '#lib/assets/mascots/black-cat-no.png';
+	import blackCatYes from '#lib/assets/mascots/black-cat-yes.png';
+	import darumaNo from '#lib/assets/mascots/daruma-no.png';
+	import darumaYes from '#lib/assets/mascots/daruma-yes.png';
+	import dogNo from '#lib/assets/mascots/dog-no.png';
+	import dogYes from '#lib/assets/mascots/dog-yes.png';
+	import foxNo from '#lib/assets/mascots/fox-no.png';
+	import foxYes from '#lib/assets/mascots/fox-yes.png';
+	import luckyCatNo from '#lib/assets/mascots/lucky-cat-no.png';
+	import luckyCatYes from '#lib/assets/mascots/lucky-cat-yes.png';
+	import tanukiNo from '#lib/assets/mascots/tanuki-no.png';
+	import tanukiYes from '#lib/assets/mascots/tanuki-yes.png';
+	import Button from '#lib/components/button/Button.svelte';
 	import {
 		studySession,
 		type MascotPair
-	} from '$lib/state/studySession.svelte';
+	} from '#lib/state/studySession.svelte.js';
 
 	interface Props {
 		type: 'correct' | 'wrong';

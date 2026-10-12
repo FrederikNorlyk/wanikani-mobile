@@ -1,13 +1,13 @@
 <script lang="ts">
-	import CenteredCardLayout from '$lib/components/layouts/CenteredCardLayout.svelte';
-	import IllustrationCard from '$lib/components/IllustrationCard.svelte';
-	import pose_happy_businessman_guts from '$lib/assets/irasutoya/pose_happy_businessman_guts.png';
-	import pose_zasetsu from '$lib/assets/irasutoya/pose_zasetsu.png';
-	import onsen_man from '$lib/assets/irasutoya/onsen_man.png';
-	import ochanoma_mu_notv from '$lib/assets/irasutoya/ochanoma_mu_notv.png';
-	import hirune_soto_businessman from '$lib/assets/irasutoya/hirune_soto_businessman.png';
-	import { studySession } from '$lib/state/studySession.svelte';
-	import Button from '$lib/components/button/Button.svelte';
+	import CenteredCardLayout from '#lib/components/layouts/CenteredCardLayout.svelte';
+	import IllustrationCard from '#lib/components/IllustrationCard.svelte';
+	import pose_happy_businessman_guts from '#lib/assets/irasutoya/pose_happy_businessman_guts.png';
+	import pose_zasetsu from '#lib/assets/irasutoya/pose_zasetsu.png';
+	import onsen_man from '#lib/assets/irasutoya/onsen_man.png';
+	import ochanoma_mu_notv from '#lib/assets/irasutoya/ochanoma_mu_notv.png';
+	import hirune_soto_businessman from '#lib/assets/irasutoya/hirune_soto_businessman.png';
+	import { studySession } from '#lib/state/studySession.svelte.js';
+	import Button from '#lib/components/button/Button.svelte';
 
 	interface Props {
 		onContinue: () => void;
