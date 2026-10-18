@@ -27,6 +27,7 @@
 	import StudySessionFinished from '#lib/components/illustration-cards/StudySessionFinished.svelte';
 	import LevelUpPage from '#lib/components/illustration-cards/LevelUpPage.svelte';
 	import Synchronizing from '#lib/components/illustration-cards/Synchronizing.svelte';
+	import Log from '#lib/util/log.js';
 
 	type AppState =
 		| 'loading'
@@ -68,7 +69,7 @@
 			try {
 				user = await UserRepository.getUser({ forceSync: true });
 			} catch (e) {
-				console.error(e);
+				Log.error(e);
 				toast.error('Could not get user information');
 			}
 
@@ -82,7 +83,7 @@
 					nextReviewData = n;
 				})
 				.catch((e) => {
-					console.error(e);
+					Log.error(e);
 					toast.error('Could not get assignments');
 				});
 
@@ -94,7 +95,7 @@
 						numberOfLessons = count;
 					})
 					.catch((e) => {
-						console.error(e);
+						Log.error(e);
 						toast.error('Could not get available lessons');
 					})
 			);
@@ -104,7 +105,7 @@
 
 				promises.push(
 					SubjectsRepository.synchronize().catch((e) => {
-						console.error(e);
+						Log.error(e);
 						toast.error('Could not synchronize with WaniKani');
 					})
 				);
@@ -218,7 +219,7 @@
 					);
 				})
 				.catch((e) => {
-					console.error(e);
+					Log.error(e);
 					toast.error('Could not create review');
 				});
 
@@ -290,7 +291,7 @@
 				nextReviewData = n;
 			})
 			.catch((e) => {
-				console.error(e);
+				Log.error(e);
 				toast.error('Could not get assignments');
 			});
 

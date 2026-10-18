@@ -1,3 +1,5 @@
+import Log from '#lib/util/log.js';
+
 export abstract class Repository {
 	protected static read<T>(key: string): T | undefined {
 		const raw = localStorage.getItem(key);
@@ -10,7 +12,7 @@ export abstract class Repository {
 		try {
 			parsed = JSON.parse(raw);
 		} catch (e) {
-			console.error(e);
+			Log.error(e);
 			return undefined;
 		}
 

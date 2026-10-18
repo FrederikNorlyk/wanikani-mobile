@@ -11,6 +11,7 @@
 	import PermissionHint from './PermissionHint.svelte';
 	import TextField from '#lib/components/form/TextField.svelte';
 	import APITokenPageButton from './APITokenPageButton.svelte';
+	import Log from '#lib/util/log.js';
 
 	let isFormDisabled = $state(false);
 	let apiTokenInput = $state<HTMLInputElement | null>(null);
@@ -96,7 +97,7 @@
 					await submit();
 					if (login.fields.allIssues()) isFormDisabled = false;
 				} catch (e) {
-					console.error(e);
+					Log.error(e);
 					toast.error('Could not log in');
 					isFormDisabled = false;
 				}

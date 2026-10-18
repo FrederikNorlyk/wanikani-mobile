@@ -1,5 +1,6 @@
 import * as UserAPI from '#lib/functions/user.remote.js';
 import CookieUtil from '#lib/util/cookieUtil.js';
+import Log from '#lib/util/log.js';
 import { command, form, getRequestEvent } from '$app/server';
 import { invalid, redirect } from '@sveltejs/kit';
 import * as v from 'valibot';
@@ -15,7 +16,7 @@ export const login = form(
 		try {
 			await UserAPI.getUser();
 		} catch (e) {
-			console.error(e);
+			Log.error(e);
 			CookieUtil.delete(cookies, 'api_token');
 			invalid(issue._apiToken('Invalid API token'));
 		}

@@ -13,6 +13,7 @@
 	import BookOpen from '@lucide/svelte/icons/book-open';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import AnswerButton from '#lib/components/review/AnswerButton.svelte';
+	import Log from '#lib/util/log.js';
 
 	interface Props {
 		subject: Subject;
@@ -61,7 +62,7 @@
 					} else if (!navigator.onLine) {
 						return;
 					}
-					console.error(err);
+					Log.error(err);
 					toast.error('Failed to load audio');
 				});
 		}

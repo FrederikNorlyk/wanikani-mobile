@@ -1,5 +1,6 @@
 import { subjectTypes } from '#lib/types/subjectType.js';
 import sendHTTPRequest from '#lib/util/httpUtil.js';
+import Log from '#lib/util/log.js';
 import { query } from '$app/server';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';
@@ -152,7 +153,7 @@ async function hydrateCharacterImageSvgs(subjects: Subject[]) {
 
 			const res = await fetch(url);
 			if (!res.ok) {
-				console.error(
+				Log.error(
 					`Failed to download character image for subject #${subject.id}: ${res.status}`
 				);
 			}
