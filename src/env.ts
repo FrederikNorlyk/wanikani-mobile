@@ -5,5 +5,7 @@ export const variables = defineEnvVars({
 	CRON_SECRET: { static: true },
 	DATABASE_URL: { static: true },
 	PRIVATE_VAPID: { static: true },
-	PUBLIC_VAPID: { public: true, static: true }
+	PUBLIC_VAPID: { public: true, static: true },
+	SENTRY_ORG: { static: true },
+	SENTRY_PROJECT: { static: true }
 });

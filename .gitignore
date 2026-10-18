@@ -24,3 +24,6 @@ vite.config.ts.timestamp-*
 
 /docs/http/http-client.private.env.json
 /docs/http/wanikani/http-client.private.env.json
+
+# Sentry Config File
+.env.sentry-build-plugin

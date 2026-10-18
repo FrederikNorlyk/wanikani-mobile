@@ -1,50 +1,55 @@
 import CookieUtil from '#lib/util/cookieUtil.js';
+import * as Sentry from '@sentry/sveltekit';
 import { redirect } from '@sveltejs/kit';
-import type { Handle } from '@sveltejs/kit/hooks';
+import { sequence, type Handle } from '@sveltejs/kit/hooks';
 
-export const handle: Handle = async ({ event, resolve }) => {
-	const routeId = event.route.id;
+export const handle: Handle = sequence(
+	Sentry.sentryHandle(),
+	async ({ event, resolve }) => {
+		const routeId = event.route.id;
 
-	const apiToken = CookieUtil.get(event.cookies, 'api_token');
+		const apiToken = CookieUtil.get(event.cookies, 'api_token');
 
-	if (routeId?.startsWith('/(authed)') && !apiToken) {
-		throw redirect(303, '/login');
+		if (routeId?.startsWith('/(authed)') && !apiToken) {
+			throw redirect(303, '/login');
+		}
+
+		if (routeId?.startsWith('/login') && apiToken) {
+			throw redirect(303, '/');
+		}
+
+		const response = await resolve(event);
+
+		response.headers.set('X-Content-Type-Options', 'nosniff');
+		response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+		response.headers.set(
+			'Permissions-Policy',
+			[
+				'accelerometer=()',
+				'autoplay=()',
+				'camera=()',
+				'clipboard-read=(self)',
+				'clipboard-write=()',
+				'display-capture=()',
+				'encrypted-media=()',
+				'fullscreen=()',
+				'geolocation=()',
+				'gyroscope=()',
+				'magnetometer=()',
+				'microphone=()',
+				'midi=()',
+				'payment=()',
+				'picture-in-picture=()',
+				'publickey-credentials-get=()',
+				'screen-wake-lock=()',
+				'usb=()',
+				'web-share=()',
+				'xr-spatial-tracking=()'
+			].join(', ')
+		);
+
+		return response;
 	}
-
-	if (routeId?.startsWith('/login') && apiToken) {
-		throw redirect(303, '/');
-	}
-
-	const response = await resolve(event);
-
-	response.headers.set('X-Content-Type-Options', 'nosniff');
-	response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-
-	response.headers.set(
-		'Permissions-Policy',
-		[
-			'accelerometer=()',
-			'autoplay=()',
-			'camera=()',
-			'clipboard-read=(self)',
-			'clipboard-write=()',
-			'display-capture=()',
-			'encrypted-media=()',
-			'fullscreen=()',
-			'geolocation=()',
-			'gyroscope=()',
-			'magnetometer=()',
-			'microphone=()',
-			'midi=()',
-			'payment=()',
-			'picture-in-picture=()',
-			'publickey-credentials-get=()',
-			'screen-wake-lock=()',
-			'usb=()',
-			'web-share=()',
-			'xr-spatial-tracking=()'
-		].join(', ')
-	);
-
-	return response;
-};
+);
+export const handleError = Sentry.handleErrorWithSentry();
