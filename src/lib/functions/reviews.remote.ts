@@ -25,7 +25,8 @@ const schema = v.pipe(
 			review: {
 				assignment_id: assignmentId,
 				incorrect_meaning_answers: incorrectMeaningAnswers,
-				incorrect_reading_answers: incorrectReadingAnswers
+				incorrect_reading_answers: incorrectReadingAnswers,
+				created_at: new Date().toISOString().replace('Z', '000Z')
 			}
 		})
 	)
