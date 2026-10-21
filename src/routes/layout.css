@@ -89,7 +89,7 @@
 	}
 
 	main {
-		padding: calc(1.25rem + env(safe-area-inset-top, 0px))
+		padding: calc(2rem + env(safe-area-inset-top, 0px))
 			calc(1.25rem + env(safe-area-inset-right, 0px))
 			calc(1.25rem + env(safe-area-inset-bottom, 0px))
 			calc(1.25rem + env(safe-area-inset-left, 0px));
