@@ -41,7 +41,7 @@
 
 			apiTokenInput.value = text.trim();
 			shouldTryClipboardAutopaste = false;
-			form?.submit();
+			form?.requestSubmit();
 		} catch {
 			// Clipboard reads are often denied without a user gesture.
 		}
