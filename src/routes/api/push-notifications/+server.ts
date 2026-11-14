@@ -6,9 +6,9 @@ import {
 } from '$app/env/private';
 import { PUBLIC_VAPID } from '$app/env/public';
 import { neon } from '@neondatabase/serverless';
-import webpush from 'web-push';
+import { sendNotification, setVapidDetails } from 'web-push';
 
-webpush.setVapidDetails(`mailto:${CONTACT_EMAIL}`, PUBLIC_VAPID, PRIVATE_VAPID);
+setVapidDetails(`mailto:${CONTACT_EMAIL}`, PUBLIC_VAPID, PRIVATE_VAPID);
 
 export async function GET({ request }) {
 	const secret = request.headers.get('x-cron-secret');
@@ -32,7 +32,7 @@ export async function GET({ request }) {
 	// Send all pushes concurrently
 	const results = await Promise.allSettled(
 		rows.map((row) =>
-			webpush.sendNotification(
+			sendNotification(
 				row.push_subscription,
 				JSON.stringify({
 					title: 'Reviews Ready',
