@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { cn } from '#lib/shadcn/utils.js';
+	import { cn } from '#lib/shadcn/utils.ts';
 
 	interface Props {
 		children: Snippet;

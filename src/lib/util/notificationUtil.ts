@@ -1,5 +1,5 @@
-import * as NotificationsAPI from '#lib/functions/notifications.remote.js';
-import { base64UrlToUint8Array } from '#lib/util/base64.js';
+import * as NotificationsAPI from '#lib/functions/notifications.remote.ts';
+import { base64UrlToUint8Array } from '#lib/util/base64.ts';
 import { PUBLIC_VAPID } from '$app/env/public';
 
 export function supportsPushNotifications(): boolean {

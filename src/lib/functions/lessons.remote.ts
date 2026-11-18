@@ -1,4 +1,4 @@
-import sendHTTPRequest from '#lib/util/httpUtil.js';
+import sendHTTPRequest from '#lib/util/httpUtil.ts';
 import { query } from '$app/server';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';

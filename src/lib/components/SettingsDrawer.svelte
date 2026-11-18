@@ -5,12 +5,12 @@
 	import SettingsRepository, {
 		AUDIO_CHOICES,
 		type Settings
-	} from '#lib/repository/local-storage/settingsRepository.js';
-	import * as AssignmentService from '#lib/services/assignmentService.js';
-	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+	} from '#lib/repository/local-storage/settingsRepository.ts';
+	import * as AssignmentService from '#lib/services/assignmentService.ts';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.ts';
 	import NotificationBadge from '#lib/components/NotificationBadge.svelte';
 	import Button from '#lib/components/button/Button.svelte';
-	import { supportsPushNotifications } from '#lib/util/notificationUtil.js';
+	import { supportsPushNotifications } from '#lib/util/notificationUtil.ts';
 	import { resolve } from '$app/paths';
 	import AnchorButton from '#lib/components/button/AnchorButton.svelte';
 	import LogOutButton from '#lib/components/button/LogOutButton.svelte';

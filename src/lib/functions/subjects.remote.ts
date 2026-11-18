@@ -1,6 +1,6 @@
-import { subjectTypes } from '#lib/types/subjectType.js';
-import sendHTTPRequest from '#lib/util/httpUtil.js';
-import Log from '#lib/util/log.js';
+import { subjectTypes } from '#lib/types/subjectType.ts';
+import sendHTTPRequest from '#lib/util/httpUtil.ts';
+import Log from '#lib/util/log.ts';
 import { query } from '$app/server';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';

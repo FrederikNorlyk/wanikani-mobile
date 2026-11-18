@@ -15,7 +15,7 @@
 	import {
 		studySession,
 		type MascotPair
-	} from '#lib/state/studySession.svelte.js';
+	} from '#lib/state/studySession.svelte.ts';
 
 	interface Props {
 		type: 'correct' | 'wrong';

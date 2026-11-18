@@ -6,7 +6,7 @@
 	import onsen_man from '#lib/assets/irasutoya/onsen_man.png';
 	import ochanoma_mu_notv from '#lib/assets/irasutoya/ochanoma_mu_notv.png';
 	import hirune_soto_businessman from '#lib/assets/irasutoya/hirune_soto_businessman.png';
-	import { studySession } from '#lib/state/studySession.svelte.js';
+	import { studySession } from '#lib/state/studySession.svelte.ts';
 	import Button from '#lib/components/button/Button.svelte';
 
 	interface Props {

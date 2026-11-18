@@ -1,4 +1,4 @@
-import CookieUtil from '#lib/util/cookieUtil.js';
+import CookieUtil from '#lib/util/cookieUtil.ts';
 import { getRequestEvent } from '$app/server';
 
 interface Parameters {

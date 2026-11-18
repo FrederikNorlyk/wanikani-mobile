@@ -1,5 +1,5 @@
-import ProgressRepository from '#lib/repository/database/progressRepository.js';
-import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
+import ProgressRepository from '#lib/repository/database/progressRepository.ts';
+import SubjectsRepository from '#lib/repository/database/subjectsRepository.ts';
 
 const DB_NAME = 'wanikani';
 const DB_VERSION = 3;

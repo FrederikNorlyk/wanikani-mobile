@@ -4,7 +4,7 @@
 	import study_night_boy from '#lib/assets/irasutoya/study_night_boy.png';
 	import study_chienetsu_boy from '#lib/assets/irasutoya/study_chienetsu_boy.png';
 	import kokage_tree_necchusyou from '#lib/assets/irasutoya/kokage_tree_necchusyou.png';
-	import type { NextReviewData } from '#lib/functions/assignments.remote.js';
+	import type { NextReviewData } from '#lib/functions/assignments.remote.ts';
 	import Button from '#lib/components/button/Button.svelte';
 	import IllustrationCard from '#lib/components/IllustrationCard.svelte';
 

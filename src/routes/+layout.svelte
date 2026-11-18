@@ -2,11 +2,11 @@
 	import './layout.css';
 	import favicon from '#lib/assets/favicon.png';
 	import { onMount } from 'svelte';
-	import { Toaster } from '#lib/shadcn/components/ui/sonner/index.js';
+	import { Toaster } from '#lib/shadcn/components/ui/sonner/index.ts';
 	import {
 		KEYBOARD_MANAGER_CONTEXT,
 		KeyboardManager
-	} from '#lib/util/keyboardManager.js';
+	} from '#lib/util/keyboardManager.ts';
 	import { setContext } from 'svelte';
 
 	let { children } = $props();

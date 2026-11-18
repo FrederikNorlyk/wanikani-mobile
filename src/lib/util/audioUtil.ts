@@ -1,5 +1,5 @@
-import type { Subject } from '#lib/functions/subjects.remote.js';
-import type { AudioChoice } from '#lib/repository/local-storage/settingsRepository.js';
+import type { Subject } from '#lib/functions/subjects.remote.ts';
+import type { AudioChoice } from '#lib/repository/local-storage/settingsRepository.ts';
 
 export default class AudioUtil {
 	public static async createAudioElement(

@@ -3,12 +3,12 @@
 	import GridLayout from '#lib/components/layouts/GridLayout.svelte';
 	import ProgressRepository, {
 		type Progress
-	} from '#lib/repository/database/progressRepository.js';
-	import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
-	import type { Subject } from '#lib/functions/subjects.remote.js';
-	import { setStudySession } from '#lib/state/studySession.svelte.js';
+	} from '#lib/repository/database/progressRepository.ts';
+	import SubjectsRepository from '#lib/repository/database/subjectsRepository.ts';
+	import type { Subject } from '#lib/functions/subjects.remote.ts';
+	import { setStudySession } from '#lib/state/studySession.svelte.ts';
 	import Button from '#lib/components/button/Button.svelte';
-	import { cn } from '#lib/shadcn/utils.js';
+	import { cn } from '#lib/shadcn/utils.ts';
 	import {
 		AlertDialog,
 		AlertDialogAction,
@@ -18,7 +18,7 @@
 		AlertDialogFooter,
 		AlertDialogHeader,
 		AlertDialogTitle
-	} from '#lib/shadcn/components/ui/alert-dialog/index.js';
+	} from '#lib/shadcn/components/ui/alert-dialog/index.ts';
 	import SubjectCard from '../SubjectCard.svelte';
 	import SubjectCharacter from '#lib/components/SubjectCharacter.svelte';
 

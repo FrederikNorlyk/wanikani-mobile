@@ -1,5 +1,5 @@
-import sendHTTPRequest from '#lib/util/httpUtil.js';
-import { getSrsStage } from '#lib/util/srsStageUtil.js';
+import sendHTTPRequest from '#lib/util/httpUtil.ts';
+import { getSrsStage } from '#lib/util/srsStageUtil.ts';
 import { query } from '$app/server';
 import * as v from 'valibot';
 import { ValiError } from 'valibot';
