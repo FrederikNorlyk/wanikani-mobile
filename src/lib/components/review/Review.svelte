@@ -106,12 +106,22 @@
 
 	<div class="flex space-x-4">
 		{#if isShowingAnswer}
-			<AnswerButton onclick={onCorrectAnswer} type="correct" />
-			<AnswerButton onclick={onWrongAnswer} type="wrong" />
+			<AnswerButton
+				keyboardShortcut={['ArrowLeft', 'h']}
+				onclick={onCorrectAnswer}
+				type="correct"
+			/>
+
+			<AnswerButton
+				keyboardShortcut={['ArrowRight', 'l']}
+				onclick={onWrongAnswer}
+				type="wrong"
+			/>
 		{:else}
 			<Button
 				class="h-30 flex-1"
 				buttonColor="sand"
+				keyboardShortcut={['ArrowLeft', 'ArrowRight', 'h', 'l', ' ']}
 				onclick={() => {
 					void audioElement?.play();
 					isShowingAnswer = true;

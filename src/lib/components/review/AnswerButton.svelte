@@ -20,9 +20,10 @@
 	interface Props {
 		type: 'correct' | 'wrong';
 		onclick: () => void;
+		keyboardShortcut?: string | string[];
 	}
 
-	const { type, onclick }: Props = $props();
+	const { type, onclick, keyboardShortcut }: Props = $props();
 
 	const mascots: Record<MascotPair, Record<Props['type'], string>> = {
 		'black-cat': { correct: blackCatYes, wrong: blackCatNo },
@@ -43,7 +44,14 @@
 		aria-hidden="true"
 		src={mascot}
 	/>
-	<Button class="h-30 w-full" buttonColor="sand" {onclick} size="medium">
+
+	<Button
+		class="h-30 w-full"
+		buttonColor="sand"
+		{keyboardShortcut}
+		{onclick}
+		size="medium"
+	>
 		{#if type === 'correct'}
 			Knew it
 		{:else}
