@@ -77,7 +77,12 @@
 	</div>
 
 	{#if numberOfAssignments > 0}
-		<Button buttonColor="red" onclick={onReviewButtonPressed} size="medium">
+		<Button
+			buttonColor="red"
+			keyboardShortcut="r"
+			onclick={onReviewButtonPressed}
+			size="medium"
+		>
 			<BookOpen size={30} />
 			<span>Start Reviewing</span>
 		</Button>

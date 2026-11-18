@@ -3,6 +3,11 @@
 	import favicon from '#lib/assets/favicon.png';
 	import { onMount } from 'svelte';
 	import { Toaster } from '#lib/shadcn/components/ui/sonner/index.js';
+	import {
+		KEYBOARD_MANAGER_CONTEXT,
+		KeyboardManager
+	} from '#lib/util/keyboardManager.js';
+	import { setContext } from 'svelte';
 
 	let { children } = $props();
 
@@ -54,7 +59,13 @@
 			document.removeEventListener('visibilitychange', handleVisibilityChange);
 		};
 	});
+
+	const keyboardManager = new KeyboardManager();
+
+	setContext(KEYBOARD_MANAGER_CONTEXT, keyboardManager);
 </script>
+
+<svelte:window onkeyup={(event) => keyboardManager.handleKeyUp(event)} />
 
 <svelte:head>
 	<link href={favicon} rel="icon" />

@@ -45,6 +45,7 @@
 					class="flex-1 flex-col gap-4"
 					buttonColor="sand"
 					iconColor="green"
+					keyboardShortcut="p"
 					onclick={onPracticeButtonPressed}
 					size="large"
 				>
