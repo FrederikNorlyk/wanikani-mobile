@@ -29,7 +29,7 @@
 </script>
 
 <script lang="ts">
-	import { cn, type WithElementRef } from '#lib/shadcn/utils.js';
+	import { cn, type WithElementRef } from '#lib/shadcn/utils.ts';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	let {

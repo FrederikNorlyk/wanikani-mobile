@@ -1,33 +1,33 @@
 <script lang="ts">
-	import * as AssignmentAPI from '#lib/functions/assignments.remote.js';
-	import * as LessonAPI from '#lib/functions/lessons.remote.js';
+	import * as AssignmentAPI from '#lib/functions/assignments.remote.ts';
+	import * as LessonAPI from '#lib/functions/lessons.remote.ts';
 	import {
 		type Assignment,
 		type NextReviewData
-	} from '#lib/functions/assignments.remote.js';
-	import * as AssignmentService from '#lib/services/assignmentService.js';
+	} from '#lib/functions/assignments.remote.ts';
+	import * as AssignmentService from '#lib/services/assignmentService.ts';
 	import { onMount, untrack } from 'svelte';
 	import { toast } from 'svelte-sonner';
-	import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
+	import SubjectsRepository from '#lib/repository/database/subjectsRepository.ts';
 	import Review from '#lib/components/review/Review.svelte';
-	import * as ReviewAPI from '#lib/functions/reviews.remote.js';
+	import * as ReviewAPI from '#lib/functions/reviews.remote.ts';
 	import SRSStageToast from '#lib/components/SRSStageToast.svelte';
-	import type { User } from '#lib/functions/user.remote.js';
-	import * as UserAPI from '#lib/functions/user.remote.js';
-	import UserRepository from '#lib/repository/local-storage/userRepository.js';
+	import type { User } from '#lib/functions/user.remote.ts';
+	import * as UserAPI from '#lib/functions/user.remote.ts';
+	import UserRepository from '#lib/repository/local-storage/userRepository.ts';
 	import {
 		setStudySession,
 		studySession
-	} from '#lib/state/studySession.svelte.js';
+	} from '#lib/state/studySession.svelte.ts';
 	import HomePage from '#lib/components/home/HomePage.svelte';
 	import PracticePage from '#lib/components/practice/PracticePage.svelte';
-	import ProgressRepository from '#lib/repository/database/progressRepository.js';
-	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
-	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
+	import ProgressRepository from '#lib/repository/database/progressRepository.ts';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.ts';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.ts';
 	import StudySessionFinished from '#lib/components/illustration-cards/StudySessionFinished.svelte';
 	import LevelUpPage from '#lib/components/illustration-cards/LevelUpPage.svelte';
 	import Synchronizing from '#lib/components/illustration-cards/Synchronizing.svelte';
-	import Log from '#lib/util/log.js';
+	import Log from '#lib/util/log.ts';
 
 	type AppState =
 		| 'loading'

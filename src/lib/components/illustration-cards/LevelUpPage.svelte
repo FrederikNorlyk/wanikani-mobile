@@ -3,8 +3,8 @@
 	import IllustrationCard from '#lib/components/IllustrationCard.svelte';
 	import { onMount } from 'svelte';
 	import CenteredCardLayout from '#lib/components/layouts/CenteredCardLayout.svelte';
-	import ConfettiCannon from '#lib/ui/confettiCannon.js';
-	import UserRepository from '#lib/repository/local-storage/userRepository.js';
+	import ConfettiCannon from '#lib/ui/confettiCannon.ts';
+	import UserRepository from '#lib/repository/local-storage/userRepository.ts';
 	import Button from '#lib/components/button/Button.svelte';
 
 	interface Props {

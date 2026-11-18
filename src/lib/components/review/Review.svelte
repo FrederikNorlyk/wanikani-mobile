@@ -1,19 +1,19 @@
 <script lang="ts">
-	import type { Subject } from '#lib/functions/subjects.remote.js';
+	import type { Subject } from '#lib/functions/subjects.remote.ts';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import { Progress } from '#lib/shadcn/components/ui/progress/index.js';
-	import SettingsRepository from '#lib/repository/local-storage/settingsRepository.js';
-	import AudioUtil from '#lib/util/audioUtil.js';
+	import { Progress } from '#lib/shadcn/components/ui/progress/index.ts';
+	import SettingsRepository from '#lib/repository/local-storage/settingsRepository.ts';
+	import AudioUtil from '#lib/util/audioUtil.ts';
 	import Button from '#lib/components/button/Button.svelte';
 	import { toast } from 'svelte-sonner';
-	import { studySession } from '#lib/state/studySession.svelte.js';
-	import { calculatePercentage } from '#lib/util/mathUtil.js';
+	import { studySession } from '#lib/state/studySession.svelte.ts';
+	import { calculatePercentage } from '#lib/util/mathUtil.ts';
 	import CurrentSubjectCard from '#lib/components/review/CurrentSubjectCard.svelte';
 	import AnswerCard from '#lib/components/review/AnswerCard.svelte';
 	import BookOpen from '@lucide/svelte/icons/book-open';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import AnswerButton from '#lib/components/review/AnswerButton.svelte';
-	import Log from '#lib/util/log.js';
+	import Log from '#lib/util/log.ts';
 
 	interface Props {
 		subject: Subject;

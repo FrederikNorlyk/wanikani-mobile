@@ -1,9 +1,9 @@
 <script lang="ts">
 	import LogOut from '@lucide/svelte/icons/log-out';
-	import * as Remote from '#lib/functions/auth.remote.js';
+	import * as Remote from '#lib/functions/auth.remote.ts';
 	import { toast } from 'svelte-sonner';
-	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
-	import * as Database from '#lib/repository/database/database.js';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.ts';
+	import * as Database from '#lib/repository/database/database.ts';
 	import {
 		AlertDialog,
 		AlertDialogAction,
@@ -13,10 +13,10 @@
 		AlertDialogFooter,
 		AlertDialogHeader,
 		AlertDialogTitle
-	} from '#lib/shadcn/components/ui/alert-dialog/index.js';
+	} from '#lib/shadcn/components/ui/alert-dialog/index.ts';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import * as NotificationUtil from '#lib/util/notificationUtil.js';
+	import * as NotificationUtil from '#lib/util/notificationUtil.ts';
 	import Button from '#lib/components/button/Button.svelte';
 
 	let isLoggingOut = $state(false);

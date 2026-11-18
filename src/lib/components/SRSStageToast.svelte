@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SRSStage } from '#lib/util/srsStageUtil.js';
+	import type { SRSStage } from '#lib/util/srsStageUtil.ts';
 
 	interface Props {
 		srsStage: SRSStage;

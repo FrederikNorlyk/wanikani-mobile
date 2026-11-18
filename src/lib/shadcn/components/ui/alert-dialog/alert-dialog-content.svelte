@@ -6,7 +6,7 @@
 		cn,
 		type WithoutChild,
 		type WithoutChildrenOrChild
-	} from '#lib/shadcn/utils.js';
+	} from '#lib/shadcn/utils.ts';
 	import type { ComponentProps } from 'svelte';
 
 	let {

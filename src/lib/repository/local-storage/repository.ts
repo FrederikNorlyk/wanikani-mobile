@@ -1,4 +1,4 @@
-import Log from '#lib/util/log.js';
+import Log from '#lib/util/log.ts';
 
 export abstract class Repository {
 	protected static read<T>(key: string): T | undefined {

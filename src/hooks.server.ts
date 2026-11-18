@@ -1,4 +1,4 @@
-import CookieUtil from '#lib/util/cookieUtil.js';
+import CookieUtil from '#lib/util/cookieUtil.ts';
 import * as Sentry from '@sentry/sveltekit';
 import { redirect } from '@sveltejs/kit';
 import { sequence, type Handle } from '@sveltejs/kit/hooks';

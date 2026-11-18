@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import Card from '#lib/components/Card.svelte';
-	import { cn } from '#lib/shadcn/utils.js';
+	import { cn } from '#lib/shadcn/utils.ts';
 
 	interface Props {
 		alt: string;

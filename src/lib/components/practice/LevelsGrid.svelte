@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Button from '#lib/components/button/Button.svelte';
-	import { Progress } from '#lib/shadcn/components/ui/progress/index.js';
-	import SubjectsRepository from '#lib/repository/database/subjectsRepository.js';
-	import ProgressRepository from '#lib/repository/database/progressRepository.js';
-	import { calculatePercentage } from '#lib/util/mathUtil.js';
-	import { cn } from '#lib/shadcn/utils.js';
-	import UserRepository from '#lib/repository/local-storage/userRepository.js';
+	import { Progress } from '#lib/shadcn/components/ui/progress/index.ts';
+	import SubjectsRepository from '#lib/repository/database/subjectsRepository.ts';
+	import ProgressRepository from '#lib/repository/database/progressRepository.ts';
+	import { calculatePercentage } from '#lib/util/mathUtil.ts';
+	import { cn } from '#lib/shadcn/utils.ts';
+	import UserRepository from '#lib/repository/local-storage/userRepository.ts';
 	import { onMount } from 'svelte';
 
 	interface Props {

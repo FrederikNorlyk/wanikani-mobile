@@ -3,15 +3,15 @@
 	import { onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
 	import mascot from '#lib/assets/mascots/boy-and-dog.png';
-	import { login } from '#lib/functions/auth.remote.js';
-	import { FieldError } from '#lib/shadcn/components/ui/field/index.js';
-	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
+	import { login } from '#lib/functions/auth.remote.ts';
+	import { FieldError } from '#lib/shadcn/components/ui/field/index.ts';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.ts';
 	import Card from '#lib/components/Card.svelte';
 	import Button from '#lib/components/button/Button.svelte';
-	import PermissionHint from './PermissionHint.svelte';
 	import TextField from '#lib/components/form/TextField.svelte';
 	import APITokenPageButton from './APITokenPageButton.svelte';
-	import Log from '#lib/util/log.js';
+	import Log from '#lib/util/log.ts';
+	import PermissionHint from './PermissionHint.svelte';
 
 	let isFormDisabled = $state(false);
 	let apiTokenInput = $state<HTMLInputElement | null>(null);

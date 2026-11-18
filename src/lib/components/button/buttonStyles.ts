@@ -1,4 +1,4 @@
-import { cn } from '#lib/shadcn/utils.js';
+import { cn } from '#lib/shadcn/utils.ts';
 
 export type ButtonStyleProps = {
 	class?: string;

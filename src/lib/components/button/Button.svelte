@@ -3,7 +3,7 @@
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import { type ButtonStyleProps, getButtonClass } from './buttonStyles.ts';
 	import './button.css';
-	import { getKeyboardManager } from '#lib/util/keyboardManager.js';
+	import { getKeyboardManager } from '#lib/util/keyboardManager.ts';
 
 	type Props = Omit<HTMLButtonAttributes, 'children'> &
 		ButtonStyleProps & {
