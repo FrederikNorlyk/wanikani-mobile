@@ -7,8 +7,8 @@
 	import SettingsDrawer from '#lib/components/SettingsDrawer.svelte';
 	import AnchorButton from '#lib/components/button/AnchorButton.svelte';
 	import Button from '#lib/components/button/Button.svelte';
-	import type { NextReviewData } from '#lib/functions/assignments.remote.js';
-	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.js';
+	import type { NextReviewData } from '#lib/functions/assignments.remote.ts';
+	import AppMetadataRepository from '#lib/repository/local-storage/appMetadataRepository.ts';
 	import NotificationBadge from '#lib/components/NotificationBadge.svelte';
 	import ReviewCard from '#lib/components/home/ReviewCard.svelte';
 

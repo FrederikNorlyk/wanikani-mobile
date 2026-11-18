@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.js';
+	import { Spinner } from '#lib/shadcn/components/ui/spinner/index.ts';
 	import crane_game_kani from '#lib/assets/irasutoya/crane_game_kani.png';
 	import CenteredCardLayout from '#lib/components/layouts/CenteredCardLayout.svelte';
 	import IllustrationCard from '#lib/components/IllustrationCard.svelte';
